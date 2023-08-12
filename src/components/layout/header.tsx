@@ -17,7 +17,6 @@ export default function Header() {
           <MenuItem name="Ajuda" state="disabled" url="/reports/help"/>
         </ul>
       </nav>
-      
     </header>
   )
 }

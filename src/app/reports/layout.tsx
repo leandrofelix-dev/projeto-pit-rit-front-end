@@ -21,7 +21,7 @@ export default function RootLayout({
         <main className="app">
           <section className="content">{children}</section>
         </main>
-        <Footer/>
+      {/* <Footer/> */}
       </body>
     </html>
   )
