@@ -1,11 +1,12 @@
 import * as Label from '@radix-ui/react-label';
 import { TouchableTable } from './touchable-table';
 
+
 export const TableInput = () => {
   const daysOfWeek = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta'];
   const periods = ['Manhã 🌥', 'Tarde ☀️', 'Noite 🌙'];
   const times = ['A', 'B', 'C', 'D'];
-  const options = ['aula', 'planejamento', 'atendimento ao aluno', 'apoio de ensino', 'orientação', 'extracurricular', 'pesquisa', 'extensão', 'gestão', 'comissões'];
+  const options = ['Aula', 'Planejamento', 'Atendimento ao aluno', 'Apoio de ensino', 'Orientação', 'Extracurricular', 'Pesquisa', 'Extensão', 'Gestão', 'Comissões'];
 
   return (
     <div className="flex flex-col px-4 -mt-6">
