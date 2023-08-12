@@ -17,7 +17,7 @@ type periodType = {
   activity: Activity[]
 }
 
-interface RitContract {
+export interface RitContract {
   segunda: periodType[]
   terca: periodType[]
   quarta: periodType[]

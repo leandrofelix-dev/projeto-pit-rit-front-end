@@ -1,10 +1,14 @@
 'use client'
+import { useState } from "react"
 
 import { SectionHeader } from "@/components/section-header"
 import { SelectInput } from "@/components/inputs/select-input"
 import { SeparatorElement } from "@/components/separator"
 import { TextInput } from "@/components/inputs/text-input"
 import { TextAreaInput } from "@/components/inputs/text-area-input"
+import { TableInput } from "@/components/inputs/table-input"
+import { SubmitButton } from "@/components/inputs/submit-button"
+import { RitContract } from "@/contracts/rit-contract"
 
 export default function Home() {
   return (
@@ -55,6 +59,14 @@ export default function Home() {
           <section>
             <SectionHeader title="ATIVIDADES DE CAPACITAÇÃO"/>
             <TextAreaInput label={"Descrever o andamento das atividades de capacitação realizada e seu cronograma atual."} id={"atividades-de-capacitacao"} />
+          </section>
+            <SeparatorElement />
+          <section className="mb-12">
+            <SectionHeader title="CARGA HORÁRIA"/>
+            <TableInput />
+          </section>
+          <section className="flex justify-center mb-12">
+            <SubmitButton value="Gerar Formulário"/>
           </section>
       </form>
     </div>
