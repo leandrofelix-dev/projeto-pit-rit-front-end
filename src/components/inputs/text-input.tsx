@@ -1,5 +1,7 @@
-import React from 'react';
-import * as Label from '@radix-ui/react-label';
+import { data } from '@/data/rit-data'
+import * as Label from '@radix-ui/react-label'
+import { useState } from 'react'
+
 
 interface ITextInputProps {
   label: string
@@ -19,6 +21,16 @@ export const TextInput = ({label, placeholder, type, id} : ITextInputProps) => (
       type={type}
       id={id}
       placeholder={placeholder}
+      onChange={(e) => {
+        const itemToVerify = data.find((item: any) => item.id === e.target.id);
+        if (itemToVerify) {
+          itemToVerify.value = e.target.value;
+          console.log(data)
+        } else {
+          data.push({id: e.target.id, value: e.target.value})
+          console.log(data)
+        }
+      }}
     />
   </div>
 );

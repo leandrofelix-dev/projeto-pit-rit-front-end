@@ -1,3 +1,4 @@
+import { data } from '@/data/rit-data';
 import * as Label from '@radix-ui/react-label';
 
 interface ISelectInputProps {
@@ -13,11 +14,22 @@ export const SelectInput = ({label, options, id}: ISelectInputProps) => {
         htmlFor={id}>
         {label}
       </Label.Root>
-      <select id={id} name={id} className=" bg-white shadow-zinc-200 inline-flex px-3 py-2.5 rounded-sm text-zinc-400 shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px] focus:shadow-zinc-500 w-200 h-10">
+      <select id={id} 
+        name={id} className=" bg-white shadow-zinc-200 inline-flex px-3 py-2.5 rounded-sm text-zinc-400 shadow-[0_0_0_1px] outline-none focus:shadow-[0_0_0_2px] focus:shadow-zinc-500 w-200 h-10" 
+        onChange={(e) => {
+          const itemToVerify = data.find((item: any) => item.id === e.target.id);
+          if (itemToVerify) {
+            itemToVerify.value = e.target.value;
+            console.log(data)
+          } else {
+            data.push({id: e.target.id, value: e.target.value})
+            console.log(data)
+          }
+        }}>
         <option value="">Selecionar...</option>
         {
           options.map((option, index) => (
-            <option key={index} id={`${id}-${index}`}>{option}</option>
+            <option key={index} id={`${id}-${index}`} >{option}</option>
           ))
         }
       </select>
