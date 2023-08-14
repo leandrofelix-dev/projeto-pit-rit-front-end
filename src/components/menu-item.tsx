@@ -14,7 +14,7 @@ export default function MenuItem({ name, state, url }: IMenuItemProps) {
   
   return (
     <li className={`text-zinc-600 border p-2 rounded font-bold hover:border-zinc-600 ${border}`}>
-      <Link href={'url'}>{name}</Link>
+      <Link href={url}>{name}</Link>
     </li>
   );
 }
