@@ -12,8 +12,8 @@ export default function Header() {
       />
       <nav>
         <ul className='flex items-center space-x-8 text-zinc-200'>
-          <MenuItem name="Inicio" state="active" url="/reports/"/>
-          <MenuItem name="PIT" state="active" url="/reports/pit"/>
+          <MenuItem name="Inicio" state="disabled" url="/reports/"/>
+          <MenuItem name="PIT" state="disabled" url="/reports/pit"/>
           <MenuItem name="Ajuda" state="disabled" url="/reports/help"/>
         </ul>
       </nav>
