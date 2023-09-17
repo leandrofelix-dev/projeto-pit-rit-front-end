@@ -9,8 +9,6 @@ import { TextAreaInput } from "@/components/inputs/text-area-input"
 import { TableInput } from "@/components/inputs/table-input"
 import { SubmitButton } from "@/components/inputs/submit-button"
 
-export let data = []
-
 export default function Home() {
   return (
     <>
